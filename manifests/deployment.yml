@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: vegarjbpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vegarjbpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vegarjbpipelinesjavascriptdocker 
+          image: mycontainerregistryrjv.azurecr.io/vegarjbpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
